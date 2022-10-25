@@ -22,7 +22,14 @@ A prefix of a string s is any leading contiguous substring of s.
     public static boolean hasPrefix(String word, String pref){
         boolean hasPref = true;
 
-        for(int i=0; i<pref.length(); i++){
+        int prefLen = pref.length();
+        int wordLen = word.length();        
+
+        for(int i=0; i<prefLen; i++){
+            if(prefLen > wordLen){
+                return false;
+            }
+
             if(word.charAt(i) != pref.charAt(i)){
                 return false;
             }            
@@ -33,8 +40,12 @@ A prefix of a string s is any leading contiguous substring of s.
     public static void main (String[]args){
         //["leetcode","win","loops","success"]
         //"code"
-        String [] words = {"pay","attention","practice","attend"};
-        String pref = "at";
+        //["kttxeksggb","vucqwew","lyknscc","mryl","vwarnwkfmd","ivawxbntgs","mylw","namybmfy","uosag","rzernqxyn","puf","hfwjnmvm","jjfyd","xteybd","v","ywntwzn","npsogop","brgvlw","vewhi","brk","hheub","zl","vt","bxjtjivep","p","io","xotulskjmt","mctffonh","pmeuqhoe","ghktrtq","u","ngnvwan","pqmlvvhl","enjf","qomcejb","twgqww","bnilyqy","nc","fttlodnz","fya","g","uoivsr","gtxgcaf","qs","gkfl","sdmacxf","mzy","xjv","yipc","rctqugjjk","myij","xxg","vyup","utqxplpsa","imbteaczlc","qfgdcz","atfn","pxcsg","f","omukbiaudb","uh","uobwgt","hgqipk","zunfzinenk","i","p","pet","fxai","ortqpwkukg","rxgh","ylfh"]
+        //"ikwjoty"
+        //["pay","attention","practice","attend"]
+        //"at"
+        String [] words = {"kttxeksggb","vucqwew","lyknscc","mryl","vwarnwkfmd","ivawxbntgs","mylw","namybmfy","uosag","rzernqxyn","puf","hfwjnmvm","jjfyd","xteybd","v","ywntwzn","npsogop","brgvlw","vewhi","brk","hheub","zl","vt","bxjtjivep","p","io","xotulskjmt","mctffonh","pmeuqhoe","ghktrtq","u","ngnvwan","pqmlvvhl","enjf","qomcejb","twgqww","bnilyqy","nc","fttlodnz","fya","g","uoivsr","gtxgcaf","qs","gkfl","sdmacxf","mzy","xjv","yipc","rctqugjjk","myij","xxg","vyup","utqxplpsa","imbteaczlc","qfgdcz","atfn","pxcsg","f","omukbiaudb","uh","uobwgt","hgqipk","zunfzinenk","i","p","pet","fxai","ortqpwkukg","rxgh","ylfh"};
+        String pref = "ikwjoty";
         System.out.println(prefixCount(words, pref));
     }
  }
