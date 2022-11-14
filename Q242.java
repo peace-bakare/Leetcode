@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Properties;
 
 public class Q242 {
     public static boolean isAnagram(String s, String t){
@@ -27,7 +26,7 @@ public class Q242 {
             if(map.get(i) != 0){
                 return false;
             }
-        }        
+        }
         return true;
     }
 
