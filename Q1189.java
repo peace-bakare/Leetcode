@@ -5,6 +5,22 @@
 You can use each character in text at most once. Return the maximum number of instances that can be formed.
  */
 
+
+
+ /*
+ SOLUTION THAT I PROVIDED THAT DIDN'T WORK FOR ALL TEST CASES...
+ 
+  * Set<Character> dash = new HashSet<Character>();
+        for(int i=0; i<text.length(); i++){
+            dash.add(text.charAt(i));
+        }
+        StringBuilder strBuild = new StringBuilder();
+        int count = dash.size();
+        
+        int res = textLen / count;
+        
+        return res;
+  */
 public class Q1189 {
     public static int maxNumberOfBalloons(String text) {
         int bCount = 0, aCount = 0, lCount = 0, oCount = 0, nCount = 0;
