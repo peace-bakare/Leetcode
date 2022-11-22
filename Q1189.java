@@ -6,7 +6,7 @@ You can use each character in text at most once. Return the maximum number of in
  */
 
 public class Q1189 {
-    public int maxNumberOfBalloons(String text) {
+    public static int maxNumberOfBalloons(String text) {
         int bCount = 0, aCount = 0, lCount = 0, oCount = 0, nCount = 0;
 
         for (int i = 0; i < text.length(); i++){
@@ -29,7 +29,7 @@ public class Q1189 {
         return Math.min(bCount, Math.min(aCount, Math.min(lCount, Math.min(oCount, nCount))));
     }
 
-    void main (String [] args){
+    public static void main (String [] args){
         String text = "loonbalxballpoon";
         System.out.println(maxNumberOfBalloons(text));
     }
